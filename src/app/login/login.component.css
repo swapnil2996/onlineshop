@@ -1,0 +1,30 @@
+.but-log{
+    background-color: crimson;
+    border: none;
+    margin: 10% 0;
+    padding: 15px;
+    margin-left: 40%; 
+}
+
+hr{
+    width: 60%;
+    margin: 3% auto;
+}
+
+.bord {
+    border: 0.5px solid #d4d4d4;
+    width: 60%;
+    margin: 3% auto;
+    border-radius: 5px;
+    box-shadow: 0 8px 11px -12px black;}
+
+h2{
+    margin: 2% 20%;
+}
+.but-log:hover{
+    box-shadow: 0 0 11px #fb2f11; 
+}
+
+span{
+    color: #fb2f11;
+}
