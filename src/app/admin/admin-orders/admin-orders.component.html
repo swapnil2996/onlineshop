@@ -14,7 +14,7 @@
             <td>{{ order.datePlaced | date}}</td>
             <!-- <td>{{order.shoppingCart.items.title}}</td> -->
             <td>
-                <a [routerLink]='["/order-view/",order.id]'>View</a>
+                <a [routerLink]='["/order-view/",order.datePlaced]'>View</a>
             </td>
         </tr>
     </tbody>

@@ -13,13 +13,14 @@ export class OrderService {
 
     placeOrder(order) {
         const result = this.db.list('/orders').push(order);
+        console.log(order);
         console.log('Successful Order');
         this.shoppingCartService.clearCart();
         return result;
     }
 
     getOrders() {
-        return this.db.list('/orders/').valueChanges();
+        return this.db.list('/orders').valueChanges();
     }
 
     getOrdersByUser(userId: string) {
@@ -29,4 +30,8 @@ export class OrderService {
     getOrderById(orderId: string) {
         return this.db.object('/order/' + orderId);
       }
+
+    getOrderByDate(orderDate: number) {
+        return this.db.list('/orders', ref => ref.orderByChild('datePlaced').equalTo(orderDate)).valueChanges();
+    }
 }

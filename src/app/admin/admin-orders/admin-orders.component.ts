@@ -16,8 +16,11 @@ export class AdminOrdersComponent implements OnInit, OnDestroy {
 
     ngOnInit() {
         this.subscription = this.orderService.getOrders()
-            .subscribe(x => this.orders = x);
-            console.log(this.orders);
+            .subscribe(x => {
+                console.log(x)
+                this.orders = x}
+                );
+
     }
 
     ngOnDestroy() {

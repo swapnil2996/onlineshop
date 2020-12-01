@@ -13,6 +13,7 @@ export class ListOrderViewComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.order$.subscribe(order => console.log(order))
   }
 
 }
